@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Lobster&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,431;1,431&display=swap');
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; /* Background terang */
+  text-align: center;
+}
+
+h2, h4 {
+  color: #333;
+
+}
+
+.titik {
+  font-family: 'Lobster', sans-serif;
+  text-align: center;
+}
+
+
+.card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.navbar {
+  background-color: orange;
+}
+
+.navbar-nav .nav-link {
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: orange;
+}
+.navbar a:hover {
+  border-bottom: 2px solid orange;
+  transition: border-bottom 0.3s ease;
+}
+
+/* Sticky Navbar Adjustment */
+.navbar {
+  z-index: 1030; /* Ensures the navbar stays on top of other elements */
+}
+
+.search-bar {
+  border: 2px solid orange;
+}
+
+.btn-warning {
+  background-color: orange; /* Warna dasar tombol */
+  color: white; /* Warna teks */
+  border: none; /* Menghapus border default */
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px; /* Membuat ujung membulat */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Animasi halus */
+}
+
+.btn-warning:hover {
+  background-color: orange; /* Warna saat hover */
+  transform: scale(1.05); /* Sedikit membesar saat hover */
+}
+
+.btn-warning:active {
+  background-color: orangered; /* Warna saat tombol ditekan */
+  transform: scale(0.98); /* Sedikit mengecil saat ditekan */
+}
+
+.hero {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x600') no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 50px 0;
+  font-weight: bolder;
+}
+
+
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+
+.hero button:hover {
+  transform: scale(1.1);
+}
+
+
+
+.categories {
+  background-color: #f8f9fa;
+}
+
+.categories .btn {
+  background-color: orange;
+  color: black;
+}
+
+.categories .btn:hover {
+  background-color: #0056b3;
+}
+
+.about {
+  background-color: #f1f1f1;
+}
+
+.contact {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+
+.contact h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+}
+
+.contact p {
+  font-size: 20px;
+  margin-top: 10px;
+  color:orange;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.contact-link:hover {
+  transform: translateY(-10px);
+  color: #000;
+}
+
+.contact-icon {
+  font-size: 3rem;
+  color: inherit;
+  margin-bottom: 10px;
+}
+
+.bi-instagram {
+  color: #E4405F;
+}
+
+.bi-facebook {
+  color: #1877F2;
+}
+
+.bi-whatsapp {
+  color: #25D366;
+}
+
+@media (max-width: 768px) {
+  .contact h2 {
+    font-size: 28px;
+  }
+  .contact p {
+    font-size: 14px;
+  }
+  .contact-icon {
+    font-size: 2.5rem;
+  }
+}
+footer {
+  background-color: #343a40;
+  color: white;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: orange;
+}
+
+
+
+.story-gallery {
+  width: 100%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.story-container {
+  width: 80%;
+  max-width: 900px;
+}
+
+/* Thumbnails styling */
+.stories {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.story-thumbnail {
+  width: 80px;
+  height: 80px;
+  border: 3px solid orange;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.story-thumbnail:hover {
+  transform: scale(1.1);
+}
+
+.story-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Large story image styling */
+.story-content {
+  display: flex;
+  justify-content: center;
+}
+
+.story-slide {
+  display: none;
+  width: 100%;
+}
+
+.story-slide img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Show story slide based on input checked */
+#story1:checked ~ .story-content .story-slide:nth-child(1),
+#story2:checked ~ .story-content .story-slide:nth-child(2),
+#story3:checked ~ .story-content .story-slide:nth-child(3) {
+  display: block;
+}
+
+.order-form {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.order-form h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #444;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: orange;
+  outline: none;
+  box-shadow: 0 0 5px rgba(252, 133, 5, 0.3);
+}
+
+textarea {
+  resize: none;
+}
+
+.btn-submit {
+  background-color: orange;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-submit:hover {
+  background-color: orange;
+}
+
+.text-center {
+  text-align: center;
+}
+
+input[type="radio"] {
+  accent-color: orange; /* Mengatur warna tombol radio */
+}
+
+@media (max-width: 576px) {
+  .order-form {
+      padding: 20px;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+      font-size: 0.9rem;
+  }
+
+  .btn-submit {
+      font-size: 0.9rem;
+  }
+}
+
+
+
